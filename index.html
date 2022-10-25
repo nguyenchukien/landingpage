@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
+    integrity="sha512-QKC1UZ/ZHNgFzVKSAhV5v5j73eeL9EEN289eKAEFaAjgAiobVAnVv/AGuPbXsKl1dNoel3kNr6PYnSiTzVVBCw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- link bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous">
+  <!-- link css -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <title>Phòng nghiên cứu và phát triển</title>
+
+</head>
+
+<body>
+  <!-- header -->
+  <div id="home"></div>
+  <div id="header">
+    <div id="header-wrap">
+      <div class="menu-wrap" >
+        <div class="menu navbar" >
+          <div class="menu-list navbar-collapse">
+            <ul class="onepage-nev navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#resume">Resume</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#work">Work</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button class="close-button" id="close-button"><i class="icon-close"></i></button>
+      </div>
+
+      <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar menu-bg" >
+        <div class="container">
+          <div class="navbar-header" >
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+              data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              <span class="icon-menu"></span>
+              <span class="icon-menu"></span>
+              <span class="icon-menu"></span>
+            </button>
+            <a href="#home"><img class="logo-vncert" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIPEhAPEBIQEBARFxIWFRUQFRkPERESGxYZGxoYFxcaHDQhHR8xHhcYLTEtJikrOi4uGB8zRDMtNygtLisBCgoKDg0OGBAQGS8gHSAtLS0tLS0tKy4tLy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAHABmwMBIgACEQEDEQH/xAAcAAEAAwEBAQEBAAAAAAAAAAAABgcIBQQBAwL/xABNEAABAwIBBgcJDAgGAwAAAAABAAIDBBEFBgcSITFRExQiQWFxgRY0VHORlKGy0hcyNUJScpKjsbPB0yMzU2J0gqLDCBVDY+HxJCXR/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAIDBAEFBv/EADIRAAIBAwEFBQcFAQEAAAAAAAABAgMEERITITFBUQUyYXGBBhQiM1KRoSNCYsHwsaL/2gAMAwEAAhEDEQA/ALxREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBceoymoY3OjkrKSN7DZzXzxsc07iC64XXVB58sD4GrjrGizKptnEbOGZYHyt0fIVZSpqctLeCE5aVkuIZWYedQrqI9VRF7S7SxytS5C4vx2gpagm73MDXn/AHG8l3pBParK9vsknnJGnU1PDJCubX43S0zgyoqaeBzhcNmlZE4t3gOOzUuksxZzcX45iVS8G7IzwLN2izUbdbtI9qjRpbSWCU56UaD7rcP8OofOIvaXsmxSBkQqHzQshcGkSuka2Ih3vSHk218yy3kxhJraqnpRf9K9ocRzM2uPY0Eq8s8cQZhL2NFmsfA0AbA0OAAUqluozjHPEjGo2m8cCTd1uH+HUPnEXtL3UOIQ1DeEglimZe2lE9srdLddp26wsiqZ5scrzhlToyE8VnIbKOZh+LIOrn6OoK2dk1FtPLIxrZe80ouZX45S0zgyoqaeB5GkGzSsicW7wHHZqPkXujeHAOBBBFwRrBG8Kis/vf1P/Dt+9kWalT2k1EsnLSsl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"
+                        alt=""></a>
+          </div>
+          <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix">
+              <li class="nav-item" id="open-button">
+                <a class="nav-link">
+                  <i onclick="Menu()" style="cursor: pointer;" class="icon-menu"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div id="hero-area">
+        <div class="container">
+          
+          <h5 class="script-font" >Hi This is</h5>
+          <h2 class="head-title">Trung tâm Ứng cứu khẩn cấp không gian mạng Việt Nam</h2>
+          <p class="script-font">Phòng nghiên cứu và phát triển </p>
+          <ul class="social-icon">
+            <li>
+              <a class="facebook" href="#"><i class="icon-social-facebook"></i></a>
+            </li>
+            <li>
+              <a class="twitter" href="#"><i class="icon-social-twitter"></i></a>
+            </li>
+            <li>
+              <a class="instagram" href="#"><i class="icon-social-instagram"></i></a>
+            </li>
+            <li>
+              <a class="linkedin" href="#"><i class="icon-social-linkedin"></i></a>
+            </li>
+            <li>
+              <a class="google" href="#"><i class="icon-social-google"></i></a>
+            </li>
+          </ul>
+        <button>GET A FREE QUOTE</button>
+        </div>
+      </div>
+    </div>
+
+    <section id="about" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="img-thumb fadeInLeft">
+              <!-- avatar change -->
+              <img class="img-fluid" src="https://htt.edu.vn/wp-content/uploads/2018/10/b%E1%BA%A1n-c%C3%B3-ph%C3%B9-h%E1%BB%A3p-v%E1%BB%9Bi-ng%C3%A0nh-CNTT-kh%C3%B4ng-1.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="profile-wrapper fadeInRight">
+              <h3 style="font-size:30px; margin-bottom:30px">About</h3>
+              <p></p>
+              <div class="about-profile">
+                <ul class="admin-profile">
+                  <li style="font-family:Arial, Helvetica, sans-serif ;"><span class="pro-title"> Trưởng Phòng  </span> <span class="pro-detail">Anh Hiệp</span></li>
+                  <li style="font-family:Arial, Helvetica, sans-serif ;"><span class="pro-title"> Thành viên  </span> <span class="pro-detail">Anh Điệp</span></li>
+                  <li style="font-family:Arial, Helvetica, sans-serif ;"><span class="pro-title"> Thành viên</span> <span class="pro-detail">Anh Công</span></li>
+                  <li style="font-family:Arial, Helvetica, sans-serif ;"><span class="pro-title"> Thành viên </span> <span class="pro-detail">Phùng Văn Tài</span></li>
+
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="disappears" id="menu"
+      style="position: fixed; z-index: 1050; top: 0; right: 0;bottom: 0;">
+      <div class="close-menu" onclick="Close()"><i
+          style="font-size: 30px; padding: 10px; cursor: pointer; color: #00b4d9;"
+          class="fa-solid fa-xmark"></i></div>
+      <div id="menu-list">
+        <ul class="mobile-menu">
+          <li>
+            <div class="list-menu">
+              <a style="color: rgb(88, 66, 66);" href="#home">Home</a>
+            </div>
+          </li>
+          <li>
+            <div class="list-menu">
+              <a style="color: rgb(88, 66, 66);" href="#about">About</a>
+            </div>
+
+          </li>
+          <li>
+            <div class="list-menu">
+              <a style="color: rgb(88, 66, 66);" href="#services">Services</a>
+            </div>
+
+          </li>
+          <li>
+            <div class="list-menu">
+              <a style="color: rgb(88, 66, 66);" href="#resume">Resume</a>
+            </div>
+
+          </li>
+          <li>
+            <div class="list-menu">
+              <a style="color: rgb(88, 66, 66);" href="#work">Work</a>
+            </div>
+
+          </li>
+          <li>
+            <div class="list-menu">
+              <a style="color: rgb(88, 66, 66);" href="#contact"> Contact</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- middle -->
+
+  <!-- services -->
+  <div id="services">
+    <div class="title">
+      <h2>What we do</h2>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+          <div class="card" style="width:100%;height:100%">
+            <div class="card-body">
+              <i class="fas fa-laptop-code"></i>
+              <h5 class="card-title">FRONT-END DEVELOPMENT</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up
+                the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+          <div class="card" style="width:100%;height:100%">
+            <div class="card-body">
+              <i class="fas fa-layer-group"></i>
+              <h5 class="card-title">Internet of Things</h5>
+              <p class="card-text">Some quick example text to build on htheight;e card title and
+                make up htheight;e bulk of htheight;e card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+          <div class="card" style="width:100%;height:100%">
+            <div class="card-body">
+              <i class="fa-solid fa-robot"></i>
+              <h5 class="card-title">Machine Learning</h5>
+              <p class="card-text">Some quick example text to build on the.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+          <div class="card" style="width:100%;height:100%">
+            <div class="card-body">
+              <i class="fa-solid fa-shield"></i>
+              <h5 class="card-title">Information Assurance</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up
+                the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- work -->
+  <div id="work">
+    <div class="container">
+      <div class="title">
+        <h2>My Remarkable Works</h2>
+      </div>
+      <div class="row">
+        <div class="col controls">
+          <ul class="filter-btn">
+            <button data-filter="all" class="active-btn home" id="all">ALL</button>
+            <button data-filter="design" id="design">DESIGN</button>
+            <button data-filter="development" id="development">DEVELOPMENT</button>
+            <button data-filter="print" id="print">PRINT</button>
+          </ul>
+        </div>
+      </div>
+      <div class="row slidesWrapper">
+        <div class="col-sm-12 col-md-6 col-lg-4 slideImgs">
+          <img class="all development print imgs" id="imgs" src="images/slide-1.jpg" alt="">
+          <div class="overlay">
+            <img src="CV/images/slide-1.jpg" alt="">
+          </div>
+          <div class="hover">
+            <i class="fas fa-eye"></i>
+            <i class="fas fa-link"></i>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 slideImgs">
+          <img class="all design print imgs" id="imgs" src="images/slide-2.jpg" alt="">
+          <div class="overlay">
+            <img src="CV/images/slide-2.jpg" alt="">
+          </div>
+          <div class="hover">
+            <i class="fas fa-eye"></i>
+            <i class="fas fa-link"></i>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 slideImgs">
+          <img class="all development imgs" id="imgs" src="images/slide-3.jpg" alt="">
+          <div class="overlay">
+            <img src="CV/images/slide-3.jpg" alt="">
+          </div>
+          <div class="hover">
+            <i class="fas fa-eye"></i>
+            <i class="fas fa-link"></i>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 slideImgs">
+
+          <img class="all design development imgs" id="imgs" src="images/slide-4.jpg" alt="">
+          <div class="overlay">
+            <img src="CV/images/slide-4.jpg" alt="">
+          </div>
+          <div class="hover">
+            <i class="fas fa-eye"></i>
+            <i class="fas fa-link"></i>
+          </div>
+
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 slideImgs">
+
+          <img class="all development imgs" id="imgs" src="images/slide-5.jpg" alt="">
+          <div class="overlay">
+            <img src="CV/images/slide-5.jpg" alt="">
+          </div>
+          <div class="hover">
+            <i class="fas fa-eye"></i>
+            <i class="fas fa-link"></i>
+          </div>
+
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 slideImgs">
+
+          <img class="all design print imgs" src="images/slide-6.jpg" alt="">
+          <div class="overlay">
+            <img src="CV/images/slide-6.jpg" id="imgs" alt="">
+          </div>
+          <div class="hover">
+            <i class="fas fa-eye"></i>
+            <i class="fas fa-link"></i>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div> 
+  <!-- footer -->
+  <div id="contact"></div>
+  <div class="row intro">
+    <div class="col card-intro">
+      <div class="icon-intro"><i class="icon-briefcase"></i></div>
+      <h3 class="number">250</h3>
+      <h6>PROJECT WORKING</h6>
+    </div>
+    <div class="col card-intro">
+      <div class="icon-intro"><i class="icon-check"></i></div>
+      <h3 class="number">950</h3>
+      <h6>PROJECT DONE</h6>
+    </div>
+    <div class="col card-intro">
+      <div class="icon-intro"><i class="icon-diamond"></i></div>
+      <h3 class="number">150</h3>
+      <h6>AWARDS RECEIVED</h6>
+    </div>
+    <div class="col card-intro">
+      <div class="icon-intro"><i class="icon-heart"></i></div>
+      <h3 class="number">299</h3>
+      <h6>HAPPY CLIENTS</h6>
+    </div>
+  </div>
+  <div class="container contact-container">
+    <div class="main-contact">
+      <div class="col" id="contact-form">
+        <h3 id="contact-form">CONTACT FORM</h3>
+        <div style="display: flex">
+          <div class="form-group" id="box-name">
+            <input type="text" id="name" placeholder="Name" style="height: 40px" />
+            <span class="form-message"></span>
+          </div>
+          <div class="form-group" id="box-email">
+            <input type="email" id="email" placeholder="Email" style="height: 40px" />
+            <span class="form-message"></span>
+          </div>
+        </div>
+        <div class="col-md-6 form-group">
+          <input id="subject" placeholder="Subject" style="height: 40px" />
+          <span class="form-message"></span>
+        </div>
+        <div class="col-md-6 form-group">
+          <textarea id="exampleFormControlTextarea1 your-message" placeholder="Your Message"
+            rows="8" style="margin-left: 10px; margin-right: 5px; padding-top: 5px"></textarea>
+          <span class="form-message"></span>
+        </div>
+        <div class="send-message">
+          <button id="send-message" type="submit" class="btn btn-primary">
+            SEND MESSAGE
+          </button>
+        </div>
+      </div>
+      <div class="contact-address">
+        <h3>CONTACT ADDRESS</h3>
+        <div class="main-address">
+          <div class="infor">
+            <div class="icon-infor">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="content">
+              <h6>Ha Noi, Viet Nam</h6>
+            </div>
+          </div>
+          <div class="infor">
+            <div class="icon-infor"><i class="fa-solid fa-envelope"></i></div>
+            <div class="content">
+              <a class="row-col" href="#">nguyenchukien1509@gmail.com</a>
+              <a class="row" style="margin-left: 0" href="#">nguyenchukien1509@gmail.com</a>
+            </div>
+          </div>
+          <div class="infor">
+            <div class="icon-infor"><i class="fa-solid fa-phone"></i></div>
+            <div class="content">
+              <a class="row-col" href="#">+(84) 982360766</a>
+              <a class="row" style="margin-left: 0" href="#">+(84) 982360766</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.6009544725976!2d105.79607981485401!3d21.00862718600929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aca0ccd470f7%3A0xddded5dd5cf8bc5e!2zQ-G7pWMgVOG6p24gU-G7kSBWw7QgVHV54bq_biDEkGnhu4du!5e0!3m2!1svi!2s!4v1666537557455!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  <div class="container-fluid footer">
+    <div class="icon-footer">
+      <a class="facebook" href="#"><i class="icon-social-facebook icons-footer"></i></a>
+      <a class="twitter" href="#"><i class="icon-social-twitter icons-footer"></i></a>
+      <a class="instagram" href="#"><i class="icon-social-instagram icons-footer"></i></a>
+      <a class="linkedin" href="#"><i class="icon-social-linkedin icons-footer"></i></a>
+      <a class="google" href="#"><i class="icon-social-google icons-footer"></i></a>
+    </div>
+    <div class="">
+      <h6>Copyright © 2018 UIdeck All Right Reserved</h6>
+    </div>
+  </div>
+
+
+
+
+  <script src="CV/js/main.js"></script>
+</body>
+
+</html>
